@@ -11,4 +11,3 @@
         @endforeach
     </table>
 @endsection
-

@@ -30,7 +30,10 @@ $groupData = [
     'namespace' => 'App\Http\Controllers\Blog\Admin',
     'prefix' => 'admin/blog',
 ];
-Route::group($groupData, function () {
+Route::group($groupData, function () { //BlogPost
+    Route::resource('posts', PostController::class)
+        ->except(['show'])                               //не робити маршрут для метода show
+        ->names('blog.admin.posts');
     //BlogCategory
     $methods = ['index','edit','store','update','create',];
     Route::resource('categories', CategoryController::class)
