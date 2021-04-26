@@ -12,8 +12,6 @@ use Illuminate\Queue\SerializesModels;
 class BlogPostAfterCreateJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
-
     /**
      * @var BlogPost
      */
